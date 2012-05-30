@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+
+<!-- There are JavaScript sample codes in bottom. -->
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery.gpPowan</title>
+  <style type="text/css">
+body {
+    font-family: "Times", "Times New Roman", serif;
+}
+pre {
+    background-color: #fffff0;
+    border: ridge 2px;
+    display: inline-block;
+    font-family: 'Courier', 'Courier New', monospace;
+    padding: 1em;
+}
+
+#container {
+  height: 100px;
+}
+#item {
+  background-color: #fec;
+  border: solid 2px #dc9;
+  border-radius: 30px;
+  font-size: 50px;
+  height: 60px;
+  line-height: 60px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+}
+  </style>
+</head>
+<body>
+  <h1>jQuery.gpPowan</h1>
+  <div id="main">
+    <p>The plugin.</p>
+    <p>for: Firefox, Chrome, Safari, Opera</p>
+    <p>
+      <pre>$(elem).gpPowan();</pre>
+    </p>
+    <p>
+      See sample codes in HTML source,<br />
+      and more informations in: <a href="http://ginpen.com/jquery/gppowan/">Ginpen.com</a>.
+    </p>
+    <div id="container">
+      <div id="item">Po~wa~n</div>
+    </div>
+    <p>
+      <button id="powan">Powan</button>
+      <button id="powan-and-hide">Powan and hide</button>
+    </p>
+  </div>
+  <div>
+    <script src="jquery-1.7.2.min.js"></script>
+    <script src="../jquery.gppowan-1.0.js"></script>
+    <script>
+(function() {
+  $('#powan').click(function(event) {
+    $('#item').gpPowan();
+  });
+
+  $('#powan-and-hide').click(function(event) {
+    $('#item').gpPowan(600, function() {
+      $(this).fadeOut();
+    });
+  });
+}());
+    </script>
+  </div>
+</body>
+</html>
